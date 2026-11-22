@@ -1,1 +1,13 @@
-d4:e9:f4:a2:2a:18
+#include <WiFi.h>
+
+void setup() {
+  Serial.begin(115200);
+  delay(1000);
+  WiFi.mode(WIFI_STA);
+  Serial.print("ESP32 STA MAC Address: ");
+  Serial.println(WiFi.macAddress());
+}
+
+void loop() {
+  delay(5000);
+}
